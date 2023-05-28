@@ -29,7 +29,7 @@ pip install health-bsa
 ```
 
 ### Contribution
-
+Any contributions are welcome
 
 ### Author
 Lam Nguyen
