@@ -45,11 +45,7 @@
     <ul class="current">
     <li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting started</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#feature">Feature</a>
-    </li>
     <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#api">API</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#contribution">Contribution</a>
     </li>
@@ -90,25 +86,36 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="health-bsa">Health-BSA</h1>
-<p>A small tool to compute the human body surface area from body weight (kg) and height (cm)</p>
+<p>A small tool to estimate the human body surface area (BSA) from body weight (kg) and height (cm).
+This tool support 5 methods</p>
+<ul>
+<li>Du Bois </li>
+<li>Mosteller</li>
+<li>Haycock</li>
+<li>Gehan and George</li>
+<li>Fujimoto</li>
+</ul>
 <h3 id="getting-started">Getting started</h3>
-<p>The package can be found in the github.</p>
+<p>The package can be found in the pip.</p>
 <pre><code class="language-bash">pip install health-bsa
 </code></pre>
-<h3 id="feature">Feature</h3>
-<ul>
-<li>BSA</li>
-</ul>
 <h3 id="usage">Usage</h3>
-<pre><code class="language-python">&gt;&gt;&gt; from health_bsa import compute bsa
-&gt;&gt;&gt; bsa(weight=60,height=100)
+<p>This function required two main information:
+- Body weight (kg)
+- Body height (cm)</p>
+<pre><code class="language-python">&gt;&gt;&gt; from health_bsa import BSA
+&gt;&gt;&gt; BSA(weight=60,height=170)
 </code></pre>
-<h3 id="api">API</h3>
-<pre><code class="language-python">&gt;&gt;&gt; from health_bsa import compute bsa
-&gt;&gt;&gt; bsa(weight=60,height=100)
+<p>The default method is <strong>Du Bois</strong>, if you would like to use another method using <strong>Method</strong> argument.</p>
+<pre><code class="language-python">&gt;&gt;&gt; from health_bsa import BSA
+&gt;&gt;&gt; BSA(weight=60,height=100, method=&quot;Mosteller&quot;)
+</code></pre>
+<p>You might want to change number of digits, you can use digits parameter.</p>
+<pre><code class="language-python">&gt;&gt;&gt; from health_bsa import BSA
+&gt;&gt;&gt; BSA(weight=60,height=100, digits=3)
 </code></pre>
 <h3 id="contribution">Contribution</h3>
-<p>Any contributions are welcome</p>
+<p>Any contributions are welcome.</p>
 <h3 id="author">Author</h3>
 <p>Lam Nguyen</p>
               
@@ -158,5 +165,5 @@
 
 <!--
 MkDocs version : 1.4.3
-Build Date UTC : 2023-05-28 11:17:35.579090+00:00
+Build Date UTC : 2023-05-28 12:14:28.887814+00:00
 -->

@@ -51,6 +51,8 @@
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="./">User Guide</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -77,9 +79,21 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h3 id="usage">Usage</h3>
-<pre><code class="language-python">&gt;&gt;&gt; from health_bsa import compute bsa
-&gt;&gt;&gt; bsa(weight=60,height=100)
+                <h2 id="user-guide">User Guide</h2>
+<h3 id="usage">Usage</h3>
+<p>This function required two main information:
+- Body weight (kg)
+- Body height (cm)</p>
+<pre><code class="language-python">&gt;&gt;&gt; from health_bsa import BSA
+&gt;&gt;&gt; BSA(weight=60,height=170)
+</code></pre>
+<p>The default method is <strong>Du Bois</strong>, if you would like to use another method using <strong>Method</strong> argument.</p>
+<pre><code class="language-python">&gt;&gt;&gt; from health_bsa import BSA
+&gt;&gt;&gt; BSA(weight=60,height=100, method=&quot;Mosteller&quot;)
+</code></pre>
+<p>You might want to change number of digits, you can use digits parameter.</p>
+<pre><code class="language-python">&gt;&gt;&gt; from health_bsa import BSA
+&gt;&gt;&gt; BSA(weight=60,height=100, digits=3)
 </code></pre>
               
             </div>
